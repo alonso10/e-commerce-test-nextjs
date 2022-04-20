@@ -1,11 +1,11 @@
-import { ReactElement } from "react";
-import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import { SideBar } from "@components/sidebar";
-import { useGetCategories } from "@services/categories";
+import { ReactElement } from 'react'
+import Box from '@mui/material/Box'
+import CssBaseline from '@mui/material/CssBaseline'
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
+import { SideBar } from '@components/sidebar'
+import { useGetCategories } from '@services/categories'
 
 export function Layout({ children }: { children: ReactElement }) {
   const { data } = useGetCategories()
@@ -13,7 +13,10 @@ export function Layout({ children }: { children: ReactElement }) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+      <AppBar
+        position="fixed"
+        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+      >
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
             Clipped drawer
